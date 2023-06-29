@@ -7,6 +7,7 @@
         scroll-behavior: smooth;       
                 
     }
+   
 
     body{
         margin: 0px;
@@ -31,6 +32,8 @@
         #hlogo {
             display: flex;            
             align-items: center;    
+            justify-content: space-around;
+            gap: 10px;
             margin-top: 1rem;             
             
             
@@ -38,18 +41,16 @@
         
             #hleft1{                
                 margin-left: 5%;
-            }
-
-            #hleft2{                
-                margin-left: -10%;
-            }
+            }          
 
                 #hleft1 img{                                        
-                    width: 60%;
+                    width: 90px;
                 }
 
                 #hleft2 img{                    
                     width: 90%;
+                    
+                    
                 }
 
     #right{
@@ -86,7 +87,7 @@
             color: white;        
             list-style-type: none;   
             text-decoration: none;
-            width: 60%;
+            width: 65%;            
             margin-top: -1rem;
             margin-left: -1.5rem;
 
@@ -131,13 +132,7 @@
         justify-content: space-around;
         align-items: center;
         padding-top: 2%;
-        padding-bottom: 5%;
-        /*position: absolute;
-        height: 90%;
-        bottom: 5%;
-        width: 50%;    
-        left: 10%;    
-        background-color: #2a455e63;    */
+        padding-bottom: 5%;       
         border-radius: 15px;
         
     }
@@ -145,9 +140,9 @@
         .center-left h1{
             width: 80%;
             font-family: 'Roboto';
-            font-size: 2.2remm;
+            font-size: 1.8rem;
             text-align: left;
-            font-weight: 700;
+            font-weight: 500;
             line-height: 1.2;
            
             margin-left: 30px;
@@ -158,6 +153,10 @@
             animation: aumentarTitulo 3s forwards;
             
         }
+            .center-left b{
+                font-weight: 700;
+                font-size: 2rem;
+            }
 
         @keyframes aumentarTitulo {
             from {
@@ -199,10 +198,7 @@
             }
         }
 
-        .center-left b{
-            font-weight: 700;
-            font-size: 2.5rem;
-        }
+       
 
 /*<!-------------------- WELCOME --------------------->*/
 
@@ -332,7 +328,7 @@
     
  }
 
- .image-services {
+.image-services {
     overflow: hidden;    
  }
 
@@ -597,6 +593,20 @@
             margin-top: 20%;
             margin-bottom: 0%;
             color: rgba(255, 255, 255, 0.5);
+
+            animation: aumentarTitulo 3s forwards;
+        }
+
+        @keyframes aumentarTitulo {
+            from {
+                opacity: 0; /* O texto está invisível */
+                transform: translateY(30px);  /*Deslocamento inicial do texto */
+                
+            }
+            to {
+                opacity: 1; /* O texto está totalmente visível */
+                transform: translateY(-5px); /* Deslocamento final do texto */
+            }
         }
 
         .center-left h3{
@@ -604,9 +614,18 @@
             text-align: left;
             font-weight: 500;
             margin-left: 10%;
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.5);       
             
+            animation: aumentarParagrafo 3s forwards;
             
+        }
+
+        @keyframes aumentarParagrafo {
+            from {                
+                    opacity: 0; /* O texto está invisível */                                }
+            to {
+                opacity: 1; /* O texto está totalmente visível */                
+            }
         }
 
         /*   -----------   WELCOME  -------------       */
@@ -632,18 +651,26 @@
             margin-left: 5rem;
         }
 
-        #w-dad h2{    
+        #w{    
             padding-top: 4.0rem;
             font-weight: 400;
             font-size: 2.2rem;
             text-align: right;
+
+            transition: transform 0.3s ease;
         }
+
+        
+         .w:hover {
+            transform: scale(1.2);
+         }
 
         #w-dad p{        
             font-weight: 400;
             font-size: 1.2rem;
-            text-align: right;
+            text-align: right;         
         }
+
 
         #w2 {
             width: 28%;
@@ -661,36 +688,7 @@
             
         }
 
-        /*
-        .w3{
-            position: relative;
-            margin-left: 5%;
-            margin-top: 1.5%;
-            height: 24.3rem;
-            width: 450px;
-            
-        }
-
-
-        .w3 img{
-            margin-left: -3.0rem;
-            height:100%;
-            border-radius: 0px;
-        }
-
-
-        .fit-w3 {
-            position: absolute;
-            background-color: #7979797a;
-            height: 330px;
-            width: 330px;
-            top: 0px;
-            border-radius: 10px;
-            margin-left: -4.5rem;
-            
-
-        }
-        */
+        
 
 
         /*   -----------   SERVICES  -------------       */
@@ -740,9 +738,16 @@
 
             text-align: center;        
             padding: 0px;
-           
-            
+          
         }
+       
+         .image-services img{
+            transition: transform 0.3s ease;
+         }
+        
+         .image-services:hover img{
+            transform: scale(1.4);
+         }
        
 
         .services-dad div img{            
